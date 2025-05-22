@@ -1,0 +1,47 @@
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+    /* padding-top: 70px; */
+    background-color: #f8f9fa;
+}
+
+/* 將表單置中 */
+.centered-form {
+    max-width: 250px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 錯誤訊息顯示為紅色 */
+.error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* 提示文字顯示 */
+.info-message {
+    color: #555;
+    font-style: italic;
+}
+
+/* 標題居中 */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 按鈕間距 */
+button,
+.btn {
+    margin: 5px;
+}
+
+/* 讓表單欄位有一點間距 */
+form input,
+form button {
+    margin-bottom: 15px;
+}

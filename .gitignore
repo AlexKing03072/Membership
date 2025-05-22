@@ -1,0 +1,10 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# 虛擬環境資料夾
+venv/
+env/
+
+# IDE設定檔（VSCode）
+.vscode/

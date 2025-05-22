@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block title %}會員系統-錯誤{% endblock %}{% block
+content %}
+<h2>發生錯誤</h2>
+<p class="error-message">{{ message }}</p>
+<div class="text-center">
+  <a href="javascript:history.back()" class="btn btn-secondary">返回前一頁</a>
+  <a href="{{ url_for('index') }}" class="btn btn-primary">返回首頁</a>
+</div>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "base.html" %} {% block title %}會員系統-編輯個人資料{% endblock %}
+{% block content %}
+<div class="container mt-5" style="max-width: 400px">
+  <h2>修改基本資料</h2>
+  <form method="post">
+    <div class="mb-3">
+      <label class="form-label">用戶名</label>
+      <input
+        class="form-control"
+        name="username"
+        type="text"
+        value="{{ user['username'] }}"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">電子郵件</label>
+      <input
+        class="form-control"
+        name="email"
+        type="email"
+        value="{{ user['email'] }}"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">密碼</label>
+      <input
+        class="form-control"
+        name="password"
+        type="password"
+        value="{{ user['password'] }}"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">手機</label>
+      <input
+        class="form-control"
+        name="phone"
+        type="text"
+        value="{{ user['phone'] }}"
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">出生年月日（YYYY-MM-DD）</label>
+      <input
+        class="form-control"
+        name="birth"
+        type="date"
+        value="{{ user['birth'] }}"
+      />
+    </div>
+    <div class="mb-3 text-center">
+      <button class="btn btn-primary" type="submit">儲存</button>
+      <a
+        href="{{ url_for('welcome', iid=user['iid']) }}"
+        class="btn btn-secondary"
+        >離開</a
+      >
+    </div>
+  </form>
+</div>
+{% endblock %}

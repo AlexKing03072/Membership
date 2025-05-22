@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block title %}會員系統-歡迎{% endblock %} {% block
+content %}
+<h2>歡迎 ， {{ username|add_stars }} !</h2>
+<div class="text-center">
+  <p>您已成功登入會員系統</p>
+  <a href="{{ url_for('edit_profile', iid=iid) }}" class="btn btn-primary"
+    >修改基本資料</a
+  >
+  <button class="btn btn-secondary" onclick="confirmDelete('{{ iid }}')">
+    刪除使用者
+  </button>
+  <a href="{{ url_for('index') }}" class="btn btn-danger">返回首頁</a>
+</div>
+<script>
+  function confirmDelete(iid) {
+    const confirmed = confirm(
+      "若刪除這個使用者，所有相關記錄將一併刪除，是否繼續？"
+    );
+    if (confirmed) {
+      window.location.href = "{{ url_for('index', iid='') }}" + iid;
+    }
+  }
+</script>
+{% endblock %}
